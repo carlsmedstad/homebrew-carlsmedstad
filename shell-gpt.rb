@@ -10,7 +10,7 @@ class ShellGpt < Formula
   license "MIT"
   head "https://github.com/TheR1D/shell_gpt.git", branch: "main"
 
-  depends_on "python@3.12"
+  depends_on "python@3"
 
   depends_on "python-click"
   depends_on "python-distro"
@@ -28,7 +28,7 @@ class ShellGpt < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    virtualenv_install_with_resources(using: "python@3")
   end
 
   test do
